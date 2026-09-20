@@ -13,4 +13,11 @@ git clone https://github.com/jg23497/linux-setup.git
 cd linux-setup
 ```
 
-Review the scripts before running them, then execute the appropriate setup scripts.
+Review the scripts before running them, then execute, after ensuring an internet connection is available.
+
+For example:
+
+```bash
+chmod +x ./fedora/setup.sh
+./fedora/setup.sh
+```
