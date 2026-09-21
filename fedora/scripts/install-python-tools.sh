@@ -13,12 +13,14 @@ if ! rpm -q python3-pip >/dev/null 2>&1; then
     packages+=(python3-pip)
 fi
 
-if ! rpm -q pipx >/dev/null 2>&1; then
-    packages+=(pipx)
-fi
+for package in pipx uv; do
+    if ! rpm -q "$package" >/dev/null 2>&1; then
+        packages+=("$package")
+    fi
+done
 
 if ((${#packages[@]} == 0)); then
-    log "python3-pip and pipx are already installed; skipping"
+    log "Python tooling is already installed; skipping"
     exit 0
 fi
 
