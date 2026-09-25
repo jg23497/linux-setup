@@ -18,6 +18,13 @@ else
     log "Zed installation finished"
 fi
 
+if command -v git >/dev/null 2>&1; then
+    log "Setting Zed as Git's editor"
+    git config --global core.editor "zed --wait"
+else
+    log "Git is not installed; skipping Git editor configuration"
+fi
+
 log "Downloading Zed settings"
 mkdir -p -- "$SETTINGS_DIR"
 temporary_settings="$(mktemp "$SETTINGS_DIR/settings.json.XXXXXX")"
