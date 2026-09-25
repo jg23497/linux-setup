@@ -63,6 +63,7 @@ readonly STEPS=(
     "install-spotify.sh"
     "install-gimp.sh"
     "install-inkscape.sh"
+    "configure-kde-keyboard.sh"
     "pin-kde-taskbar-apps.sh"
 )
 
