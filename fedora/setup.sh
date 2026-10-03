@@ -52,7 +52,6 @@ readonly STEPS=(
     "install-amd-codecs.sh"
     "install-git.sh"
     "install-cli-tools.sh"
-    "install-pianoteq.sh"
     "install-codex.sh"
     "install-google-chrome.sh"
     "install-zed.sh"
@@ -64,6 +63,8 @@ readonly STEPS=(
     "install-spotify.sh"
     "install-gimp.sh"
     "install-inkscape.sh"
+    "install-pianoteq.sh"
+    "install-reaper.sh"
     "configure-kde-keyboard.sh"
     "pin-kde-taskbar-apps.sh"
 )
