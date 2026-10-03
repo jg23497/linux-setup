@@ -9,7 +9,7 @@ source "$FEDORA_SETUP_DIR/lib/logging.sh"
 
 packages=()
 
-for package in gh wget curl 7zip; do
+for package in gh wget curl 7zip npm; do
     if ! rpm -q "$package" >/dev/null 2>&1; then
         packages+=("$package")
     fi
