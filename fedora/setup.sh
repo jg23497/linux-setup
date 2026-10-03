@@ -52,6 +52,7 @@ readonly STEPS=(
     "install-amd-codecs.sh"
     "install-git.sh"
     "install-cli-tools.sh"
+    "install-pianoteq.sh"
     "install-codex.sh"
     "install-google-chrome.sh"
     "install-zed.sh"
