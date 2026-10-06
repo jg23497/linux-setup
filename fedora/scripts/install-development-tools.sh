@@ -3,23 +3,23 @@
 set -Eeuo pipefail
 
 readonly FEDORA_SETUP_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-LOG_CONTEXT="cli-tools"
+LOG_CONTEXT="development-tools"
 
 source "$FEDORA_SETUP_DIR/lib/logging.sh"
 
 packages=()
 
-for package in wget curl 7zip; do
+for package in gh make npm; do
     if ! rpm -q "$package" >/dev/null 2>&1; then
         packages+=("$package")
     fi
 done
 
 if ((${#packages[@]} == 0)); then
-    log "Command-line tools are already installed; skipping"
+    log "Development tools are already installed; skipping"
     exit 0
 fi
 
-log "Installing command-line tools: ${packages[*]}"
+log "Installing development tools: ${packages[*]}"
 sudo dnf install -y "${packages[@]}"
-log "Command-line tools installation finished"
+log "Development tools installation finished"
